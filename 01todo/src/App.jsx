@@ -1,18 +1,23 @@
 import AddTodo from "./Components/AddTodo";
-import TodoField from "./Components/TodoField";
-import "./App.css"
+import TodoItems from "./Components/TodoItems";
+
+import Heading from "./Components/Heading";
 
 function App() {
+  const todoItems = [
+    {
+      name: "Buy Milk",
+      date: "22/11/2023",
+    },
+    { name: "Make Coffee", date: "22/11/2023" },
+    { name: "Learn React", date: "27/11/2023" },
+  ];
+
   return (
     <>
-      
-        <h1>Todo List</h1>
-        <div className="todo-items">
-        <AddTodo />
-        <TodoField />
-        </div>
-        
-      
+      <Heading />
+      <AddTodo />
+      <TodoItems todoItems={todoItems} />
     </>
   );
 }

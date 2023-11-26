@@ -1,21 +1,38 @@
 import React from "react";
+import "../App.css";
+import styles from "./AddTodo.module.css";
 
 function AddTodo() {
   return (
-    <div class="row">
-      <div class="col-6">
-        {" "}
-        <input type="text" placeholder="Enter Todo here:" />{" "}
+    <>
+      <div className="container mb-4 ">
+        <div className="row ">
+          <div className={`${styles.inputTodo}  col-6 
+          `}>
+            <input
+            className="form-control
+            p-2 bg-info bg-opacity-10 border border-info border-start-0 rounded-end"
+              type="text"
+              placeholder="Enter Todo here:"
+            />
+          </div>
+
+          <div className={`${styles.dataTodo} col-4
+          `}>
+            <input
+            className="form-control
+            p-2 bg-info bg-opacity-10 border border-info border-start-0 rounded-end"
+             type="date" placeholder="Date:" />
+          </div>
+
+          <div className="col-2">
+            <button type="button" className="btn btn-primary">
+              Add
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="col-4">
-        <input type="date" placeholder="Date:" />
-      </div>
-      <div class="col-2">
-        <button type="button" class="btn btn-success todo-button">
-          Add
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
 
