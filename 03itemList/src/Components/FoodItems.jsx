@@ -1,21 +1,20 @@
-import React from 'react'
-import Item from './Item'
+import React from "react";
+import Item from "./Item";
 
-
-function FoodItems({foodItems}) {
+function FoodItems({ foodItems }) {
   return (
     <>
-     
-      <ul className='list-group' >
-        {foodItems.map((item) => (
-          <Item key={item} item = {item}/>
-          
-          
+      <ul className="list-group">
+        {foodItems.length!== 0 && foodItems.map((item) => (
+          <Item
+            key={item}
+            item={item}
+            handleBuyButton={() => console.log(`${item} being bought`)}
+          />
         ))}
       </ul>
-    
     </>
-  )
+  );
 }
 
-export default FoodItems
+export default FoodItems;
