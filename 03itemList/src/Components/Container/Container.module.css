@@ -1,0 +1,10 @@
+.Container {
+   padding: 6px;
+   margin: 10px;
+   background-color: aquamarine;
+   font-size: 20px;
+   border:  2px solid black;
+   border-radius: 8px;
+   width: 50%;
+   min-width: 450px;
+}

@@ -2,13 +2,13 @@ import React from "react";
 
 import TodoItem from "./TodoItem";
 
-function TodoItems({ todoItems }) {
+function TodoItems({ toDoItems }) {
  
   return (
     <>
       
         <div className="container bg-info">
-          {todoItems.map((item) => (
+          {toDoItems.map((item) => (
             <TodoItem key={item.name} name={item.name} date={item.date} />
           ))}
            

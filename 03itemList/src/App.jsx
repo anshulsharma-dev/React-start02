@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Heading from "./Components/Heading";
 import FoodItems from "./Components/foodItems";
 import ErrorMessage from "./Components/ErrorMessage";
+import Container from "./Components/Container/Container";
+import Paragraph from "./Components/Paragraph";
 
 function App() {
   // let foodItems = [];
@@ -18,8 +20,18 @@ function App() {
   return (
     <>
       <Heading  />
+
+      <Container>
       <ErrorMessage foodItems = {foodItems}/>
       <FoodItems foodItems = {foodItems}/>
+      </Container>
+      
+      <Container>
+      <Paragraph/>
+      </Container>
+      
+      <Paragraph/>
+      
     </>
   );
 }

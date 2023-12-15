@@ -17,7 +17,7 @@ function App() {
     <>
       <Heading />
       <AddTodo />
-      <TodoItems todoItems={todoItems} />
+      <TodoItems toDoItems={todoItems} />
     </>
   );
 }
