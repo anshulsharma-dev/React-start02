@@ -9,15 +9,6 @@ import FoodInput from "./Components/FoodInput";
 import { useState } from "react";
 
 function App() {
-  // let foodItems = [];
-
-  // let foodItems = [
-  //   ,
-  //   "Egg Whites",
-  //   "Green Veggies",
-  //   "Whey Protein",
-  //   "Green Salad",
-  // ];
 
   let [foodItems, setFoodItems] = useState("");
 

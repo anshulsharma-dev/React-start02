@@ -1,11 +1,11 @@
 import React from "react";
 import styles from './Item.module.css'
 
-function Item({item  , handleBuyButton}) {
+function Item({item , bought , handleBuyButton}) {
 
   return (
     <>
-      <li className= {`${styles["item-color"]} list-group-item`}>
+      <li className= {`${styles["item-color"]} list-group-item ${bought&& "active" }`}>
         {item}
         <button
         onClick={handleBuyButton}
