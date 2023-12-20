@@ -11,7 +11,7 @@ function App() {
 
   const handleNewItem = (todoName , todoDate) => {
     let newTodoItems = [{"name": todoName , "date":todoDate} , ...todoItems];
-    setTodoItems(newTodoItems)
+    setTodoItems(newTodoItems);
   }
 
   const handleDeleteButtonClicked = (todoItemName) => {
