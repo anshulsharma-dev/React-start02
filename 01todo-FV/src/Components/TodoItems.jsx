@@ -2,14 +2,13 @@ import React from "react";
 
 import TodoItem from "./TodoItem";
 
-function TodoItems({ toDoItems }) {
+function TodoItems({ todoItems , deleteButtonClicked}) {
  
   return (
     <>
-      
         <div className="container bg-info">
-          {toDoItems.map((item) => (
-            <TodoItem key={item.name} name={item.name} date={item.date} />
+          {todoItems.length!==0 && todoItems.map((item) => (
+            <TodoItem deleteButtonClicked = {deleteButtonClicked} key={item.name} name={item.name} date={item.date} />
           ))}
            
         </div>

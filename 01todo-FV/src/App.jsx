@@ -1,23 +1,30 @@
 import AddTodo from "./Components/AddTodo";
 import TodoItems from "./Components/TodoItems";
-
 import Heading from "./Components/Heading";
+import NoTodoDisplay from "./Components/NoTodoDisplay";
+import { useState } from "react";
 
 function App() {
-  const todoItems = [
-    {
-      name: "Buy Milk",
-      date: "22/11/2023",
-    },
-    { name: "Make Coffee", date: "22/11/2023" },
-    { name: "Learn React", date: "27/11/2023" },
-  ];
 
+  const [todoItems, setTodoItems] = useState("");
+ 
+
+  const handleNewItem = (todoName , todoDate) => {
+    let newTodoItems = [{"name": todoName , "date":todoDate} , ...todoItems];
+    setTodoItems(newTodoItems)
+  }
+
+  const handleDeleteButtonClicked = (todoItemName) => {
+    const newTodoItems = todoItems.filter(item => item.name !== todoItemName)
+    setTodoItems(newTodoItems);
+  }
+ 
   return (
     <>
       <Heading />
-      <AddTodo />
-      <TodoItems toDoItems={todoItems} />
+      <AddTodo onNewItem={handleNewItem}/>
+      {todoItems.length === 0 && <NoTodoDisplay />}
+      <TodoItems deleteButtonClicked={handleDeleteButtonClicked} todoItems={todoItems} />
     </>
   );
 }
