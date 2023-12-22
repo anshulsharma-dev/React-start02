@@ -6,28 +6,31 @@ import { useState } from "react";
 import { TodoItemsContext } from "./Store/Todo-items-store";
 
 function App() {
-  const [todoItems, setTodoItems] = useState("");
+  const [todoItems, setTodoItems] = useState([]);
 
-  const handleNewItem = (todoName, todoDate) => {
+  const addNewItem = (todoName, todoDate) => {
     let newTodoItems = [{ name: todoName, date: todoDate }, ...todoItems];
     setTodoItems(newTodoItems);
   };
 
-  const handleDeleteButtonClicked = (todoItemName) => {
+  const deleteItem = (todoItemName) => {
     const newTodoItems = todoItems.filter((item) => item.name !== todoItemName);
     setTodoItems(newTodoItems);
   };
 
   return (
     <>
-      <TodoItemsContext.Provider value={todoItems}>
+      <TodoItemsContext.Provider
+        value={{
+          todoItems,
+          addNewItem,
+          deleteItem,
+        }}
+      >
         <Heading />
-        <AddTodo onNewItem={handleNewItem} />
-        <NoTodoDisplay  />
-        <TodoItems
-          deleteButtonClicked={handleDeleteButtonClicked}
-          
-        />
+        <AddTodo />
+        <NoTodoDisplay />
+        <TodoItems/>
       </TodoItemsContext.Provider>
     </>
   );

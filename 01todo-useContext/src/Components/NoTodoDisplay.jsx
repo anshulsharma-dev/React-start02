@@ -2,7 +2,9 @@ import React, { useContext } from "react";
 import { TodoItemsContext } from "../Store/Todo-items-store";
 
 function NoTodoDisplay() {
-  const todoItems = useContext(TodoItemsContext)
+  const { todoItems } = useContext(TodoItemsContext);
+
+
   return (
     <>
       {todoItems.length === 0 && (

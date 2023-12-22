@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../App.css";
 import styles from "./AddTodo.module.css";
 import { MdAddTask } from "react-icons/md";
-import { useContext } from "react";
 import { TodoItemsContext } from "../Store/Todo-items-store";
 
 
-function AddTodo({ onNewItem }) {
+
+function AddTodo() {
+  const contextObj = useContext(TodoItemsContext);
+  const addNewItem = contextObj.addNewItem;
+
   const [newTodo, setNewTodo] = useState("");
   const [newDate, setNewDate] = useState("");
 
@@ -19,7 +22,7 @@ function AddTodo({ onNewItem }) {
 
   const handleAddButtonClicked = (event) => {
     event.preventDefault();
-    onNewItem(newTodo, newDate);
+    addNewItem(newTodo, newDate);
     setNewTodo("");
     setNewDate("");
   };
