@@ -1,6 +1,9 @@
 import React from "react";
+import { useContext } from "react";
+import { PostList as PostListItems } from "../Store/Post-item-store";
 
 function Post() {
+  const {postList} = useContext(PostListItems);
   return (
     <div className="card" style={{ width: "18rem" }}>
       <div className="card-body">
