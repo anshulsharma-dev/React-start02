@@ -1,18 +1,37 @@
-import React from 'react'
+import React from "react";
 
 function CreatePost() {
   return (
-   <>
-   <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-   </>
-  )
+    <>
+      <div className="mb-3">
+        <label
+          htmlFor="examplehtmlFormControlInput1"
+          className="htmlForm-label"
+        >
+          Email address
+        </label>
+        <input
+          type="email"
+          className="htmlForm-control"
+          id="examplehtmlFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div className="mb-3">
+        <label
+          htmlFor="examplehtmlFormControlTextarea1"
+          className="htmlForm-label"
+        >
+          Example textarea
+        </label>
+        <textarea
+          className="htmlForm-control"
+          id="examplehtmlFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+    </>
+  );
 }
 
-export default CreatePost
+export default CreatePost;
