@@ -1,8 +1,36 @@
 .main-container {
   display: flex;
   min-height: 100vh;
+  background: grey;
 }
 
 .content {
   width: 100%;
+}
+
+.post {
+  max-width: 42rem;
+  margin: 20px 10%;
+}
+
+.hashtags {
+  margin: 4px 4px;
+}
+
+.postArea {
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+
+.reaction {
+  margin: 12px -10px -100px 0px;
+}
+
+.insidePost {
+  margin-bottom: -10px;
+}
+
+.delBtn {
+  font-size: 15px;
 }
