@@ -34,3 +34,12 @@
 .delBtn {
   font-size: 15px;
 }
+
+.noPosts {
+  text-align: center;
+  margin: 40px 40px;
+}
+
+.spinner{
+  margin: 80px;
+}
