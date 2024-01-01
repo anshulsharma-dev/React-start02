@@ -24,7 +24,6 @@ function PostsList() {
       });
 
     return () => {
-    console.log("useEffect aborted");
     controller.abort();
     }
     }, []);

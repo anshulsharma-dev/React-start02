@@ -41,6 +41,7 @@ const TodoItemsContextProvider = ({ children }) => {
     };
     dispatchTodoItems(deleteItem);
   };
+
   return (
     <TodoItemsContext.Provider
       value={{
