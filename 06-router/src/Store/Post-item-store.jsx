@@ -46,11 +46,10 @@ const PostListProvider = ({ children }) => {
       payload: { postId },
     });
   };
-
+  
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
-
     setFetching(true);
     fetch("https://dummyjson.com/posts", { signal })
       .then((res) => res.json())
@@ -58,7 +57,6 @@ const PostListProvider = ({ children }) => {
         addInitialPosts(obj.posts);
         setFetching(false);
       });
-
     return () => {
       controller.abort();
     };
