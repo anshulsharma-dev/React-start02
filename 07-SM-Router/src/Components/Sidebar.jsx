@@ -19,7 +19,7 @@ function Sidebar({ selectedTab, setSelectedTab }) {
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item" onClick={() => setSelectedTab("Home")}>
           <a
-            href="#"
+            href="/"
             className={`nav-link text-white ${
               selectedTab === "Home" && "active"
             } `}
@@ -33,7 +33,7 @@ function Sidebar({ selectedTab, setSelectedTab }) {
         </li>
         <li onClick={() => setSelectedTab("Create Post")}>
           <a
-            href="#"
+            href=""
             className={`nav-link text-white ${
               selectedTab === "Create Post" && "active"
             } `}
