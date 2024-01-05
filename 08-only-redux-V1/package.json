@@ -1,0 +1,15 @@
+{
+  "name": "08-only-redux-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-kg-redux.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^5.0.1"
+  }
+}
