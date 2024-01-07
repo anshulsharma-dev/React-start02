@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { counterActions, privacyActions } from "../store";
+import { counterActions } from "../store/Counter";
+import { privacyActions } from "../store/Privacy";
+
 
 function Buttons() {
   const dispatch = useDispatch();
