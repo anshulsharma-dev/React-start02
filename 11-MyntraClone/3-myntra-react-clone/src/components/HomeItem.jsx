@@ -17,7 +17,7 @@ function HomeItem({ item }) {
       <button
         className="btn-add-bag"
         onClick={() => {
-          console.log("homeItem clicked");
+          console.log("Add to bag clicked");
         }}
       >
         {" "}
