@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { IoPerson } from "react-icons/io5";
 import { PiHeartbeatFill } from "react-icons/pi";
 import { BsFillHandbagFill } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const bag = useSelector((store) => store.bag);
   return (
     <header>
       <div className="logo_container">
@@ -33,6 +35,7 @@ function Header() {
           placeholder="Search for products, brands and more"
         />
       </div>
+
       <div className="action_bar">
         <div className="action_container">
           <IoPerson />
@@ -47,7 +50,7 @@ function Header() {
         <Link className="action_container" to="/bag">
           <BsFillHandbagFill />
           <span className="action_name">Bag</span>
-          <span className="bag-item-count">0</span>
+          <span className="bag-item-count">{bag.length}</span>
         </Link>
       </div>
     </header>
